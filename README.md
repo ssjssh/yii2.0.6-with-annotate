@@ -29,18 +29,65 @@ Yii2使用php5.4+版本，但是由于不是测试环境，因此我使用了php
 
 ### 数据库
 
-Edit the file `config/db.php` with real data, for example:
+把config/db.php中数据库的设置成自己机器的数据库
 
-```php
-return [
-    'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
-    'username' => 'root',
-    'password' => '1234',
-    'charset' => 'utf8',
-];
-```
+### nginx
+可以直接使用的配置
 
-**NOTE:** Yii won't create the database for you, this has to be done manually before you can access it.
 
-Also check and edit the other files in the `config/` directory to customize your application.
+    server {
+        listen       80;
+        server_name  yii;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+        #据机器而定
+        root   /your/project/location;
+
+        
+        location / {
+            index  index.html index.htm index.php;
+            try_files $uri?$args $uri/?$args $uri $uri/ /index.php?$args;
+
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+        # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+        #
+        #location ~ \.php$ {
+        #    proxy_pass   http://127.0.0.1;
+        #}
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #php配置也据机器而定
+        location ~ \.php$ {
+            fastcgi_pass   127.0.0.1:9000;
+            fastcgi_index  index.php;
+            include        fastcgi.conf;
+        }
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #    deny  all;
+        #}
+    }
+    
+### hosts文件
+* Mac OSX 添加这一行  127.0.0.1 yii
+
+注意：可能需要注销或者重启才能使得hosts文件生效
+
+    
+
+
