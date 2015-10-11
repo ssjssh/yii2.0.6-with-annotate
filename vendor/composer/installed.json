@@ -1101,5 +1101,52 @@
             "datetime",
             "time"
         ]
+    },
+    {
+        "name": "jamband/yii2-schemadump",
+        "version": "v0.9.7",
+        "version_normalized": "0.9.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jamband/yii2-schemadump.git",
+            "reference": "8d0409daf84a772beb15249178470145cbc2aaaa"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jamband/yii2-schemadump/zipball/8d0409daf84a772beb15249178470145cbc2aaaa",
+            "reference": "8d0409daf84a772beb15249178470145cbc2aaaa",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "*"
+        },
+        "time": "2015-05-02 13:07:54",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "jamband\\schemadump\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Tomoki Morita",
+                "email": "tmsongbooks215@gmail.com",
+                "homepage": "http://jamband.github.io/"
+            }
+        ],
+        "description": "Generate the schema from an existing database",
+        "homepage": "https://github.com/jamband/yii2-schemadump",
+        "keywords": [
+            "command",
+            "extesion",
+            "generator",
+            "migration",
+            "yii2"
+        ]
     }
 ]

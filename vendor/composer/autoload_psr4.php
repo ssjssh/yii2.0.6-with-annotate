@@ -15,6 +15,7 @@ return array(
     'yii\\codeception\\' => array($vendorDir . '/yiisoft/yii2-codeception'),
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
+    'jamband\\schemadump\\' => array($vendorDir . '/jamband/yii2-schemadump'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),

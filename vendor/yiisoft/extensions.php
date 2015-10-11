@@ -66,4 +66,13 @@ return array (
       '@yii/redis' => $vendorDir . '/yiisoft/yii2-redis',
     ),
   ),
+  'jamband/yii2-schemadump' => 
+  array (
+    'name' => 'jamband/yii2-schemadump',
+    'version' => '0.9.7.0',
+    'alias' => 
+    array (
+      '@jamband/schemadump' => $vendorDir . '/jamband/yii2-schemadump',
+    ),
+  ),
 );
